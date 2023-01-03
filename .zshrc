@@ -24,9 +24,11 @@ plugins=(
   npm
   yarn
   zsh-autosuggestions
+  macos
   osx
   sdkman
   history-substring-search
+  web-search
 )
 
 alias x="exit"
