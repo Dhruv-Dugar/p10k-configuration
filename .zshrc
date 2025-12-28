@@ -94,7 +94,7 @@ eval "$(pyenv init --path)"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Angular CLI autocompletion
-source <(ng completion script)
+source <(ng completion script 2>/dev/null)
 
 # Zsh Highlighting (from original .zshrc)
 # Note: This requires `zsh-syntax-highlighting` to be installed.
@@ -105,3 +105,7 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+
+# Use uv instead of pip
+alias pip="uv pip"
+alias pip3="uv pip"
